@@ -14,8 +14,16 @@ addbtn.addEventListener("click" , function(){
     
     deletebtn.addEventListener("click", function(){
         li.remove();
-
 });
+
+    let completebtn = document.createElement("button");
+    completebtn.textContent = "Complete";
+
+    li.append(completebtn);
+    completebtn.addEventListener("click" , function(){
+        li.classList.add("completed");
+    })
+;
 
     tasklist.append(li);
     taskinput.value = "";
